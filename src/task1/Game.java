@@ -28,6 +28,8 @@ public class Game {
                 guessedInteger = input.nextInt();
                 input.nextLine();
 
+                --numOfGuessesLeft;
+
             } catch (InputMismatchException e) {
                 input.nextLine();
                 System.out.println("Number must be an integer");
@@ -47,7 +49,6 @@ public class Game {
                 printNumberOfGuessesLeft(numOfGuessesLeft);
             }
 
-            --numOfGuessesLeft;
 
             if(numOfGuessesLeft == 0 || isCorrectGuess){
 
