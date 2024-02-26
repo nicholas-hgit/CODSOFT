@@ -13,23 +13,22 @@ public class StudentGradeCalculator {
 
         double totalMarks = 0;
         double mark;
-        for(int i = 0; i < numberOfSubjects; ++i) {
-            System.out.printf("Enter mark for subject %d out of 100 %n",i + 1);
+        for(int subjectNumber = 1; subjectNumber <= numberOfSubjects;) {
+            System.out.printf("Enter mark for subject %d out of 100 %n", subjectNumber);
 
             try {
-                 mark = input.nextDouble();
+                mark = input.nextDouble();
                 if(isValidMark(mark)){
                     totalMarks += mark;
+                    ++subjectNumber;
                 }
                 else {
                     System.out.println("Invalid mark");
-                    --i;
                 }
 
             }catch (InputMismatchException e) {
                 input.nextLine();
                 System.out.println("Invalid mark");
-                --i;
             }
         }
 
