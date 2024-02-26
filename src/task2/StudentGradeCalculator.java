@@ -35,7 +35,7 @@ public class StudentGradeCalculator {
         double studentAverage = calculateStudentAverage(totalMarks,numberOfSubjects);
         char studentGrade = getStudentGradeFromAverage(studentAverage);
 
-        printStudentMarks(totalMarks);
+        printStudentTotalMarks(totalMarks);
         printStudentAverage(studentAverage);
         printStudentGrade(studentGrade);
 
@@ -90,7 +90,7 @@ public class StudentGradeCalculator {
         return grade;
     }
 
-    public static void printStudentMarks(double marks){
+    public static void printStudentTotalMarks(double marks){
         System.out.printf("Total marks: %s%n",marks);
     }
 
