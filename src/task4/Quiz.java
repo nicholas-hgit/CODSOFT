@@ -18,6 +18,19 @@ public class Quiz {
         return questions;
     }
 
+    // question number is by order of insertion
+    public void removeQuestionByNumber(int questionNumber){
+        questions.remove(questionNumber);
+    }
+
+    public void removeQuestion(Question question) {
+        questions.remove(question);
+    }
+
+    public void addQuestion(Question question){
+        questions.add(question);
+    }
+
     public double getTotalAvailableMarks() {
         return questions.stream()
                         .mapToInt(Question::getTotalAvailableMark)

@@ -24,7 +24,7 @@ public class Main {
 
         for(Question question : quiz.getQuestions()){
 
-            System.out.println("Enter correct answer");
+            System.out.println("Enter the correct answer");
             System.out.println(question.getQuestion());
 
             if(question instanceof MultipleChoiceQuestion){
