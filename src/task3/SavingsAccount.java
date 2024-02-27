@@ -1,10 +1,9 @@
 package task3;
 
-public class BankAccountImpl implements BankAccount {
-    private  double availableBalance;
+public class SavingsAccount extends AbstractBankAccount {
 
-    public BankAccountImpl() {
-        this.availableBalance = 0.0;
+    public SavingsAccount() {
+        super();
     }
 
     public void setAvailableBalance(double availableBalance) {

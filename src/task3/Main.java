@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        final ATM automatedTellerMachine = new ATM(new BankAccountImpl());
+        final ATM automatedTellerMachine = new ATM(new SavingsAccount());
 
         do {
 
