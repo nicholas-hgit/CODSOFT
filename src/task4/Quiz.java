@@ -19,6 +19,7 @@ public class Quiz {
     }
 
     // question number is by order of insertion
+    // therefore the first question is question 0
     public void removeQuestionByNumber(int questionNumber){
         questions.remove(questionNumber);
     }
