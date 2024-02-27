@@ -14,4 +14,8 @@ public  class MultipleChoiceQuestion extends Question {
         return possibleAnswers;
     }
 
+    public void addToPossibleAnswers(String possibleAnswer) {
+        possibleAnswers.add(possibleAnswer);
+    }
+
 }

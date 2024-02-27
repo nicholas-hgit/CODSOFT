@@ -1,9 +1,9 @@
 package task4;
 
 public class Question {
-    private final String question;
-    private final String answer;
-    private final int totalAvailableMark;
+    private String question;
+    private String answer;
+    private int totalAvailableMark;
 
     public Question(String question, String answer, int totalAvailableMark){
         this.question = question;
@@ -15,11 +15,23 @@ public class Question {
         return question;
     }
 
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
     public String getAnswer() {
         return answer;
     }
 
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
     public int getTotalAvailableMark() {
         return totalAvailableMark;
+    }
+
+    public void setTotalAvailableMark(int totalAvailableMark) {
+        this.totalAvailableMark = totalAvailableMark;
     }
 }

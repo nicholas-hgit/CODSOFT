@@ -2,6 +2,8 @@ package task4;
 
 import java.util.List;
 
+//this class is used as a local database for questions
+//it supplies the questions to the quiz
 public class QuestionsLoader {
 
     private static final List<Question> questions = List.of(
