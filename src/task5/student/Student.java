@@ -51,4 +51,8 @@ public class Student {
     public void addToRegisteredCourses(Course course){
         registeredCourses.add(course);
     }
+
+    public boolean removeFromRegisteredCourses(long courseId){
+        return registeredCourses.removeIf(course -> course.getId() == courseId );
+    }
 }

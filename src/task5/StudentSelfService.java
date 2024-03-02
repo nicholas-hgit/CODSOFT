@@ -103,9 +103,7 @@ public class StudentSelfService {
                             long courseId = input.nextLong();
                             input.nextLine();
 
-                            boolean isRemoved = student.getRegisteredCourses()
-                                    .removeIf(course -> course.getId() == courseId);
-
+                            boolean isRemoved = student.removeFromRegisteredCourses(courseId);
                             if(isRemoved) {
                                 System.out.printf("You have dropped course with id %s %n",courseId);
                             }
