@@ -2,7 +2,7 @@ package task5.student;
 
 import java.util.List;
 
-public interface StudentRepository {
+interface StudentRepository {
     String addStudent(Student student);
     List<Student> getAllStudents();
     Student getStudentById(long studentId);

@@ -8,6 +8,7 @@ import java.time.LocalTime;
 import java.util.*;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
 
 
@@ -46,7 +47,7 @@ public class Main {
                     }
                 }
             }catch (IOException e){
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
 
             //student didn't provide an answer for the question

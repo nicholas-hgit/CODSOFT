@@ -1,8 +1,10 @@
 package task3;
 
+
 public class ATM {
 
     private final BankAccount clientAccount;
+
 
     public ATM(BankAccount clientAccount){
         this.clientAccount = clientAccount;

@@ -2,7 +2,7 @@ package task5.course;
 
 import java.util.List;
 
-public class CourseLoader {
+class CourseLoader {
 
     private static final List<Course> courseList = List.of(
             new Course(

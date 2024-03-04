@@ -1,6 +1,6 @@
 package task3;
 
-public class SavingsAccount extends AbstractBankAccount {
+class SavingsAccount extends AbstractBankAccount {
 
     public SavingsAccount() {
         super();

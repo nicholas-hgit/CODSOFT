@@ -2,7 +2,7 @@ package task5.course;
 
 import java.util.List;
 
-public interface CourseRepository {
+interface CourseRepository {
     String addCourse(Course course);
     List<Course> getAllCourses();
     List<Course> getAllCoursesWithSpace();

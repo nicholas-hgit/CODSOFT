@@ -1,6 +1,6 @@
 package task3;
 
-public abstract class AbstractBankAccount implements BankAccount {
+abstract class AbstractBankAccount implements BankAccount {
     protected double availableBalance;
 
     protected AbstractBankAccount(){
