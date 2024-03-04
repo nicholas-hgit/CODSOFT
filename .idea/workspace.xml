@@ -4,10 +4,6 @@
     <list default="true" id="446e3bf9-6d77-4fc4-aa91-598a2eeed2b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task5/StudentSelfService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/StudentSelfService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/course/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/course/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/course/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/course/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/course/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/course/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/course/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/course/CourseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task5/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/student/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -68,7 +68,7 @@ public class StudentSelfService {
 
                             List<Course> registeredCourses = student.getRegisteredCourses();
                             if(registeredCourses.isEmpty()){
-                                System.out.printf("You have no registered course %n");
+                                System.out.println("You have no registered course");
                             }
                             else {
                                 registeredCourses.forEach(System.out::println);
@@ -81,7 +81,7 @@ public class StudentSelfService {
 
                             List<Course> availableCourses = courseController.getAllCoursesWithSpace();
                             if(availableCourses.isEmpty()){
-                                System.out.printf("There are no available courses %n");
+                                System.out.println("There are no available courses");
                                 continue;
                             }
 
@@ -90,11 +90,9 @@ public class StudentSelfService {
                             System.out.println("Enter course code");
                             String courseCode = input.nextLine();
 
-
                             Course course = courseController.getCourseByCourseCode(courseCode);
-
                             if(course == null){
-                                System.out.printf("invalid course code %n");
+                                System.out.println("invalid course code");
                             }
                             else{
                                 student.addToRegisteredCourses(course);
@@ -102,6 +100,12 @@ public class StudentSelfService {
                         }
 
                         case  3 -> {
+
+                            if(student.getRegisteredCourses().isEmpty()){
+                                System.out.printf("You have no registered course %n");
+                                continue;
+                            }
+
                             System.out.println("Enter course code");
                             String courseCode = input.nextLine();
 
@@ -110,7 +114,7 @@ public class StudentSelfService {
                                 System.out.printf("You dropped %s %n", courseCode);
                             }
                             else{
-                                System.out.printf("Invalid course code %n");
+                                System.out.println("Invalid course code");
                             }
 
                         }
@@ -120,8 +124,6 @@ public class StudentSelfService {
 
                 } while (!goBack);
             }
-
-
 
         }while (true);
     }
@@ -136,6 +138,7 @@ public class StudentSelfService {
         System.out.println(menu);
     }
 
+    //currently supported operations on the self-service system
     public static  void displayOptions() {
         String options = """
                 1. View registered courses

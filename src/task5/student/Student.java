@@ -1,9 +1,10 @@
-package task5.student;
 
-import task5.course.Course;
+package task5.student;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import task5.course.Course;
 
 
 public class Student {
