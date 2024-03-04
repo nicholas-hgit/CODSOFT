@@ -7,7 +7,6 @@ public class Course {
     private long numberOfStudents;
     private String title;
     private String code;
-    private String description;
     private String slot;
 
     public Course(long id, String title, String code, String slot, long capacity){
@@ -39,14 +38,6 @@ public class Course {
         this.code = code;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getSlot() {
         return slot;
     }
@@ -65,20 +56,22 @@ public class Course {
 
     public  long getNumberOfRegisteredStudents() {
         return numberOfStudents;
-
     }
+
     public  void setNumberOfRegisteredStudents(long numberOfStudents) {
         this.numberOfStudents = numberOfStudents;
     }
 
+    public void incrementNumberOfRegisteredStudents(){
+        numberOfStudents += 1;
+    }
+
     @Override
     public String toString() {
-        return "Course{" +
-                id + '\n' +
-                title + '\n' +
-                code + '\n' +
-                description + '\n' +
-                slot + '\n' +
-                '}';
+        return " Course {" +
+                "title='" + title + '\'' +
+                " code='" + code + '\'' +
+                " slot='" + slot + '\'' +
+                " }\n";
     }
 }

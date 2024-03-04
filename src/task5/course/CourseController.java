@@ -26,6 +26,10 @@ public class CourseController {
         return  courseService.getCourseById(courseId);
     }
 
+    public Course getCourseByCourseCode(String courseCode){
+        return courseService.getCourseByCourseCode(courseCode);
+    }
+
     public String updateCourse(long courseId, Course updatedCourse){
         return courseService.updateCourse(courseId,updatedCourse);
     }

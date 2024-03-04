@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CourseServiceImpl extends CourseService{
 
-    List<Course> courseList = new ArrayList<>();
+    List<Course> courseList = new ArrayList<>(CourseLoader.load());
 
     @Override
     public String addCourse(Course course) {
@@ -34,6 +34,14 @@ public class CourseServiceImpl extends CourseService{
     }
 
     @Override
+    public Course getCourseByCourseCode(String courseCode) {
+        return courseList.stream()
+                         .filter(course -> course.getCode().equals(courseCode))
+                         .findFirst()
+                         .orElse(null);
+    }
+
+    @Override
     public String updateCourse(long courseId, Course updatedCourse) {
         boolean courseExist = false;
 
@@ -44,7 +52,6 @@ public class CourseServiceImpl extends CourseService{
                 course.setCapacity(updatedCourse.getCapacity());
                 course.setCode(updatedCourse.getCode());
                 course.setTitle(updatedCourse.getTitle());
-                course.setDescription(updatedCourse.getDescription());
                 course.setSlot(updatedCourse.getSlot());
                 course.setNumberOfRegisteredStudents(updatedCourse.getNumberOfRegisteredStudents());
 

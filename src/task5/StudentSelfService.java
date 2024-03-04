@@ -24,6 +24,7 @@ public class StudentSelfService {
         do {
 
             displayHomeMenu();
+
             int selectedOption = input.nextInt();
             input.nextLine();
 
@@ -42,7 +43,7 @@ public class StudentSelfService {
 
                 System.out.printf("profile created your student id is %d %n",student.getStudentId());
             }
-            else {
+            else if (selectedOption == 2){
 
                 System.out.println("Enter student id");
                 long studentId = input.nextLong();
@@ -58,14 +59,16 @@ public class StudentSelfService {
                 do {
 
                     displayOptions();
+
                     selectedOption = input.nextInt();
+                    input.nextLine();
 
                     switch (selectedOption){
                         case  1 ->  {
 
                             List<Course> registeredCourses = student.getRegisteredCourses();
                             if(registeredCourses.isEmpty()){
-                                System.out.println("You have no registered course");
+                                System.out.printf("You have no registered course %n");
                             }
                             else {
                                 registeredCourses.forEach(System.out::println);
@@ -78,20 +81,20 @@ public class StudentSelfService {
 
                             List<Course> availableCourses = courseController.getAllCoursesWithSpace();
                             if(availableCourses.isEmpty()){
-                                System.out.println("There are no available courses");
+                                System.out.printf("There are no available courses %n");
                                 continue;
                             }
 
                             availableCourses.forEach(System.out::println);
 
-                            System.out.println("Enter course id");
-                            long courseId = input.nextLong();
-                            input.nextLine();
+                            System.out.println("Enter course code");
+                            String courseCode = input.nextLine();
 
-                            Course course = courseController.getCourseById(courseId);
+
+                            Course course = courseController.getCourseByCourseCode(courseCode);
 
                             if(course == null){
-                                System.out.println("invalid course id");
+                                System.out.printf("invalid course code %n");
                             }
                             else{
                                 student.addToRegisteredCourses(course);
@@ -99,16 +102,15 @@ public class StudentSelfService {
                         }
 
                         case  3 -> {
-                            System.out.println("Enter course id");
-                            long courseId = input.nextLong();
-                            input.nextLine();
+                            System.out.println("Enter course code");
+                            String courseCode = input.nextLine();
 
-                            boolean isRemoved = student.removeFromRegisteredCourses(courseId);
+                            boolean isRemoved = student.removeFromRegisteredCourses(courseCode);
                             if(isRemoved) {
-                                System.out.printf("You have dropped course with id %s %n",courseId);
+                                System.out.printf("You dropped %s %n", courseCode);
                             }
                             else{
-                                System.out.println("Invalid course id");
+                                System.out.printf("Invalid course code %n");
                             }
 
                         }

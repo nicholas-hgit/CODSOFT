@@ -7,6 +7,7 @@ public interface CourseRepository {
     List<Course> getAllCourses();
     List<Course> getAllCoursesWithSpace();
     Course getCourseById(long courseId);
+    Course getCourseByCourseCode(String courseCode);
     String updateCourse(long courseId, Course updatedCourse);
     String deleteCourse(Course course);
 }

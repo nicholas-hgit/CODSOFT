@@ -49,10 +49,17 @@ public class Student {
     }
 
     public void addToRegisteredCourses(Course course){
+        if(registeredCourses.contains(course)){
+            System.out.printf("Already registered for this course %n");
+            return;
+        }
+
+        course.incrementNumberOfRegisteredStudents();
         registeredCourses.add(course);
+        System.out.printf("Registered %n");
     }
 
-    public boolean removeFromRegisteredCourses(long courseId){
-        return registeredCourses.removeIf(course -> course.getId() == courseId );
+    public boolean removeFromRegisteredCourses(String courseCode){
+        return registeredCourses.removeIf(course -> course.getCode().equals(courseCode) );
     }
 }
