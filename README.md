@@ -2,9 +2,15 @@
 <p>This repository consists of 5 tasks that I completed as part of my internship at codsoft</p>
 
 <h2>Task 1</h2>
-<h3>Number Game</h3>
+<h3>NUMBER GAME</h3>
 <p>The number game is a program where the system generates an integer within a specified range</p>
 <p>It then prompts the player to guess the number, and then provides feedback on whether the number is too high, too low, or correct</p>
 <p>There is a constraint on the number of times a user is allowed to guess the number i.e 6 times</p>
 <p>The player is allowed to play multiple rounds</p>
 <p>At the end it displays the score, which is based on the number of times the player correctly guessed the number</p>
+
+<h2>Task 2</h2>
+<h3>STUDENT GRADE CALCULATOR</h3>
+<p>This program collects the marks obtained out of 100 in each of the student's subject</p>
+<p>Then calculates the average percentage and the grade of the student based on the obtained marks</p>
+<p>The output is the student's total mark, average percentage and corresponding grade</p>
