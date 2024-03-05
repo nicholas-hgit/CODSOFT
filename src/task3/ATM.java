@@ -13,7 +13,7 @@ public class ATM {
     public void withdrawAmount(double amount) {
         double newAvailableBalance = clientAccount.getAvailableBalance() - amount;
         if (newAvailableBalance < 0){
-            System.out.println("Insufficient amount for withdrawal");
+            System.out.println("Insufficient funds for withdrawal");
             return;
         }
 
@@ -31,7 +31,7 @@ public class ATM {
     }
 
     public void checkAvailableBalance(){
-        System.out.printf("Available balance: R%s %n",clientAccount.getAvailableBalance());
+        System.out.printf("Available balance: R%.2f %n",clientAccount.getAvailableBalance());
     }
 
     public void displayMenu(){

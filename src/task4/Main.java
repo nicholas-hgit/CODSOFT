@@ -79,7 +79,7 @@ public class Main {
     }
 
     public static void printTotalObtainedMarks(double totalMarks , double totalAvailableMarks){
-        System.out.printf("Marks obtained: %s / %s %n",totalMarks,totalAvailableMarks);
+        System.out.printf("Marks obtained: %.2f / %.2f %n",totalMarks,totalAvailableMarks);
     }
 
     public static void printSummaryOfAnswers(List<Map.Entry<String,String>> list) {

@@ -102,7 +102,7 @@ public class StudentSelfService {
                         case  3 -> {
 
                             if(student.getRegisteredCourses().isEmpty()){
-                                System.out.printf("You have no registered course %n");
+                                System.out.println("You have no registered course");
                                 continue;
                             }
 

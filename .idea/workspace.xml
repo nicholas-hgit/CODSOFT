@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="446e3bf9-6d77-4fc4-aa91-598a2eeed2b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/course/CourseLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/course/CourseLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/course/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/course/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/course/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/course/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/student/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/student/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/student/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/student/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task2/StudentGradeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task2/StudentGradeCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +45,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.StudentGradeCalculator.executor": "Run",
+    "Application.StudentSelfService.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",

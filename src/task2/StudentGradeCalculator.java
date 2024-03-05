@@ -32,9 +32,9 @@ public class StudentGradeCalculator {
         double studentAverage = calculateStudentAverage(totalMarks, numberOfSubjects);
         char studentGrade = getStudentGradeFromAverage(studentAverage);
 
-        System.out.printf("Total marks: %s%n", totalMarks);
-        System.out.printf("Average percentage: %s%n", studentAverage);
-        System.out.printf("Grade: %s%n", studentGrade);
+        System.out.printf("Total marks: %.2f %n", totalMarks);
+        System.out.printf("Average percentage: %.2f %n", studentAverage);
+        System.out.printf("Grade: %c %n", studentGrade);
 
     }
 
