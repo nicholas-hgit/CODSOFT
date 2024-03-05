@@ -11,8 +11,14 @@ public class ATM {
     }
 
     public void withdrawAmount(double amount) {
+
         double newAvailableBalance = clientAccount.getAvailableBalance() - amount;
-        if (newAvailableBalance < 0){
+
+        if (amount % 10.0 != 0.0 || amount < 0){
+            System.out.println("Invalid amount");
+            return;
+
+        } else if (newAvailableBalance < 0) {
             System.out.println("Insufficient funds for withdrawal");
             return;
         }
@@ -21,7 +27,7 @@ public class ATM {
     }
 
     public void depositAmount(double amount) {
-        if(amount <= 0){
+        if(amount <= 0 || amount % 10.0 != 0.0){
             System.out.println("Invalid amount");
             return;
         }
@@ -37,6 +43,8 @@ public class ATM {
     public void displayMenu(){
         String menuOptions = """
                 =============== select option ===============
+                (i) for deposits and withdrawals amount must be a multiple of R10
+                
                 1. Check Balance
                 2. Deposit
                 3. Withdraw
