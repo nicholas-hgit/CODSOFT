@@ -24,6 +24,8 @@ public class ATM {
         }
 
         clientAccount.setAvailableBalance(newAvailableBalance);
+        System.out.printf("You have successfully withdrawn R%.2f %n",amount);
+        System.out.printf("Your new available balance is R%.2f %n",newAvailableBalance);
     }
 
     public void depositAmount(double amount) {
@@ -34,6 +36,8 @@ public class ATM {
 
         double newAvailableBalance = clientAccount.getAvailableBalance() + amount;
         clientAccount.setAvailableBalance(newAvailableBalance);
+        System.out.printf("You have successfully deposited R%.2f %n",amount);
+        System.out.printf("Your new available balance is R%.2f %n",newAvailableBalance);
     }
 
     public void checkAvailableBalance(){
