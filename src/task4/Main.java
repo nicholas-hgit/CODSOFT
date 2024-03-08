@@ -11,7 +11,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //maps user provided answer to actual answer
@@ -72,6 +71,7 @@ public class Main {
                 =============== Rules ===============
                 The quiz consist of %d questions
                 You have 15 seconds maximum to answer each question
+                For multiple choice questions, enter answer answer number e.g 1 if correct answer is number 1
                 Good luck!!
                 """.formatted(numOfQuestions);
 

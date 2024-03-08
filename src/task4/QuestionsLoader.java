@@ -8,53 +8,58 @@ public class QuestionsLoader {
 
     private static final List<Question> questions = List.of(
             new MultipleChoiceQuestion(
-                    "what is 2 + 2?",
+                    "What is the main purpose of the \"if\" statement in programming?",
                     List.of(
-                            "2",
-                            "4",
-                            "6"
+                            "Loop control",
+                            "Error handling",
+                            "Conditional Execution",
+                            "Functional declaration"
                     ),
-                    "4",
+                    "3",
                     2
             ),
             new MultipleChoiceQuestion(
-                    "what is 2 * 2?",
+                    "Which data structure follows the Last in, First out(LIFO) principle?",
                     List.of(
-                            "2",
-                            "4",
-                            "6"
+                            "Queue",
+                            "Stack",
+                            "LinkedList",
+                            "Array"
                     ),
-                    "4",
+                    "2",
                     2
             ),
             new MultipleChoiceQuestion(
-                    "what is 6 * 6?",
+                    "In object-oriented programming, what is encapsulation?",
                     List.of(
-                            "12",
-                            "36",
-                            "42"
+                            "Combining multiple classes",
+                            "Hiding implementation details",
+                            "Using inheritance",
+                            "Managing memory allocation"
                     ),
-                    "36",
+                    "2",
                     2
             ),
             new MultipleChoiceQuestion(
-                    "what is 8 * 8?",
+                    "What is a git repository?",
                     List.of(
-                            "48",
-                            "81",
-                            "64"
+                            "A storage location for database records",
+                            "A centralised server for code deployment",
+                            "A version control system for tracking changes in code",
+                            "A directory for storing project documentation"
                     ),
-                    "64",
+                    "3",
                     2
             ),
             new MultipleChoiceQuestion(
-                    "what is 5 * 5?",
+                    "WHat does the term \"API\" stand for in software development?",
                     List.of(
-                            "25",
-                            "15",
-                            "30"
+                            "Application programming interface",
+                            "Advanced programming instruction",
+                            "Automated program integration",
+                            "Algorithmic protocol implementation"
                     ),
-                    "25",
+                    "1",
                     2
             )
 
