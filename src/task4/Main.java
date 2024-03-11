@@ -17,14 +17,13 @@ public class Main {
         List<Map.Entry<String,String>> summaryOfAnswers = new ArrayList<>();
         Quiz quiz = Quiz.fromQuestions(QuestionsLoader.loadQuestions());
 
-        printRules(quiz.getQuestions().size());
+        quiz.displayInstructions();
 
         double studentTotalMarks = 0;
         double totalPossibleMarks = quiz.getTotalAvailableMarks();
 
         for(Question question : quiz.getQuestions()){
 
-            System.out.println("Enter the correct answer");
             System.out.println(question.getQuestion());
 
             if(question instanceof MultipleChoiceQuestion){
@@ -51,7 +50,7 @@ public class Main {
 
             //student didn't provide an answer for the question
             if("".equals(studentAnswer)){
-                System.out.println("you are out of time \n");
+                System.out.println("time's out for this question \n");
             }
 
             summaryOfAnswers.add(Map.entry(studentAnswer,question.getAnswer()));
@@ -66,17 +65,6 @@ public class Main {
         printSummaryOfAnswers(summaryOfAnswers);
     }
 
-    public static void  printRules(int numOfQuestions){
-        String quizRules = """
-                =============== Rules ===============
-                The quiz consist of %d questions
-                You have 15 seconds maximum to answer each question
-                For multiple choice questions, enter answer answer number e.g 1 if correct answer is number 1
-                Good luck!!
-                """.formatted(numOfQuestions);
-
-        System.out.println(quizRules);
-    }
 
     public static void printTotalObtainedMarks(double totalMarks , double totalAvailableMarks){
         System.out.printf("Marks obtained: %.2f / %.2f %n",totalMarks,totalAvailableMarks);
