@@ -2,6 +2,7 @@ package task5.student;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class StudentServiceImpl extends StudentService{
 
@@ -19,11 +20,10 @@ public class StudentServiceImpl extends StudentService{
     }
 
     @Override
-    public Student getStudentById(long studentId) {
+    public Optional<Student> getStudentById(long studentId) {
         return studentList.stream()
                           .filter(student -> student.getStudentId()  == studentId)
-                          .findFirst()
-                          .orElse(null);
+                          .findFirst();
     }
 
     @Override

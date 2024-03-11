@@ -1,6 +1,7 @@
 package task5.course;
 
 import java.util.List;
+import java.util.Optional;
 
 public class CourseController {
 
@@ -22,11 +23,11 @@ public class CourseController {
         return courseService.getAllCoursesWithSpace();
     }
 
-    public Course getCourseById(long courseId){
+    public Optional<Course> getCourseById(long courseId){
         return  courseService.getCourseById(courseId);
     }
 
-    public Course getCourseByCourseCode(String courseCode){
+    public Optional<Course> getCourseByCourseCode(String courseCode){
         return courseService.getCourseByCourseCode(courseCode);
     }
 

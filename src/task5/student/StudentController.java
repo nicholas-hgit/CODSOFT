@@ -1,6 +1,7 @@
 package task5.student;
 
 import java.util.List;
+import java.util.Optional;
 
 public class StudentController {
 
@@ -18,7 +19,7 @@ public class StudentController {
         return studentService.getAllStudents();
     }
 
-    public Student getStudentById(long studentId){
+    public Optional<Student> getStudentById(long studentId){
         return studentService.getStudentById(studentId);
     }
 

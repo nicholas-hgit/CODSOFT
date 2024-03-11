@@ -2,6 +2,7 @@ package task5.course;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class CourseServiceImpl extends CourseService{
 
@@ -21,24 +22,22 @@ public class CourseServiceImpl extends CourseService{
     @Override
     public List<Course> getAllCoursesWithSpace() {
         return courseList.stream()
-                .filter(course -> course.getNumberOfRegisteredStudents() != course.getCapacity())
-                .toList();
+                         .filter(course -> course.getNumberOfRegisteredStudents() != course.getCapacity())
+                         .toList();
     }
 
     @Override
-    public Course getCourseById(long courseId) {
+    public Optional<Course> getCourseById(long courseId) {
         return courseList.stream()
-                .filter(course -> course.getId() == courseId)
-                .findFirst()
-                .orElse(null);
+                         .filter(course -> course.getId() == courseId)
+                         .findFirst();
     }
 
     @Override
-    public Course getCourseByCourseCode(String courseCode) {
+    public Optional<Course> getCourseByCourseCode(String courseCode) {
         return courseList.stream()
                          .filter(course -> course.getCode().equals(courseCode))
-                         .findFirst()
-                         .orElse(null);
+                         .findFirst();
     }
 
     @Override

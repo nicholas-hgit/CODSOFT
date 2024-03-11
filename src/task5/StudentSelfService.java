@@ -1,6 +1,7 @@
 package task5;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -41,7 +42,7 @@ public class StudentSelfService {
                 Student student = new Student(firstName,lastName,studentIdGenerator.addAndGet(15));
                 studentController.addStudent(student);
 
-                System.out.printf("profile created your student id is %d %n",student.getStudentId());
+                System.out.printf("profile registered your student id is %d %n",student.getStudentId());
             }
             else if (selectedOption == 2){
 
@@ -49,11 +50,13 @@ public class StudentSelfService {
                 long studentId = input.nextLong();
                 input.nextLine();
 
-                Student student = studentController.getStudentById(studentId);
-                if (student == null) {
+                Optional<Student> studentOptional = studentController.getStudentById(studentId);
+                if (studentOptional.isEmpty()) {
                     System.out.println("invalid student id");
                     continue;
                 }
+
+                Student student = studentOptional.get();
 
                 boolean goBack = false;
                 do {
@@ -90,12 +93,12 @@ public class StudentSelfService {
                             System.out.println("Enter course code");
                             String courseCode = input.nextLine();
 
-                            Course course = courseController.getCourseByCourseCode(courseCode);
-                            if(course == null){
-                                System.out.println("invalid course code");
+                            Optional<Course> courseOptional = courseController.getCourseByCourseCode(courseCode);
+                            if(courseOptional.isPresent()){
+                                student.addToRegisteredCourses(courseOptional.get());
                             }
                             else{
-                                student.addToRegisteredCourses(course);
+                                System.out.println("invalid course code");
                             }
                         }
 
