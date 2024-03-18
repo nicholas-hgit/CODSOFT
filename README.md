@@ -25,7 +25,7 @@
 <h2>Task 4</h2>
 <h3>QUIZ APPLICATION WITH TIMER</h3>
 <p>This is a basic quiz application that enables users to take quizzes</p>
-<p>The quistions includes multiple choice questions, in which case the user must provide the correct answer out of many possible answers</p>
+<p>The questions include multiple choice questions, in which case the user must provide the correct answer out of many possible answers</p>
 <p>The quiz is timed. The user is only given 15 seconds to answer a question,in which failure to do so leaves the answer to that question blank, and then move to the next question</p>
 <p>At the end, the user's score is displayed, along with the summary of the provided answers and correct answers</p>
 
